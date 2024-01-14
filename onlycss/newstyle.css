@@ -1,0 +1,1171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    /* border:1px solid red; */
+}
+
+html{
+    font-size: 15px;
+    overflow-x: hidden;
+    /* overflow: hidden; */
+}
+
+body{
+    overflow-x: hidden;
+}
+.fixed{
+    width:80px;
+    height:200px;
+    position: absolute;
+    top:50%;
+    right:0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.fixed #top{
+    width:100%;
+    height:80px;
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Header Start Here */
+
+.bar{
+    display: none;
+    padding-right: 2rem;
+}
+.bar .fa{
+    font-size: 2rem;
+    color:#fff;
+    position: fixed;
+    
+}
+
+.bar [name="close-outline"]{
+    display: none;
+}
+.big-wrapper{
+    background-color: #1A3398;
+    width:100%;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:100%;
+    padding:2rem;
+    border-bottom: 1px solid #2d6adb;
+    height: 9rem;
+}
+
+.logo img{
+    width: 40%;
+}
+
+#navbar-list{
+    display: flex;
+    gap:4rem;
+    list-style: none;
+}
+
+#navbar-list .navbar-link{
+    font-weight: 800;
+    display: inline-block;
+    color:#fff;
+}
+
+.car-move{
+    padding-top: 6rem;
+    max-width: 80%;
+    margin:0 auto;
+}
+
+.car-move-left{
+    animation: right 0.6s linear 0s;
+}
+
+@keyframes right {
+    0%{
+        transform:translateX(-30%);
+    }
+
+    100%{
+        transform:translateZ(0);
+    }
+}
+
+.car-move-left h3{
+    font-size: 1.2rem;
+    color:#00e3bd;
+    font-weight: 700;
+}
+
+.car-move-left h4{
+    color:#fff;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 7rem;
+}
+
+.car-move-left span{
+    color:#00e3bd;
+}
+.becarwash{
+    display: flex;
+    align-items: center;
+}
+
+.hr{width:30px;
+    border:1px solid #00e3bd;
+    margin-top:2.5rem;
+    margin-right: 1rem;
+}
+
+.car-move-left .btn{
+    margin-top: 4rem;
+    width:130px;
+    height: 50px;
+    background-color: #00e3bd;
+    border: none;
+    padding-top:1rem;
+    color:#1A3398;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+/* Car right section start here */
+
+.car-move-right{
+    display: flex;
+    gap: 1.8rem;
+    justify-content: flex-end;
+    border: 1px solid #0849bf;
+    margin-left: 150px;
+    text-align: right;
+    border-radius: 22px;
+    padding: 1.9rem;
+    box-shadow: 6px 5px 10px -2px rgba(0,0,0,0.44);
+}
+
+.car-move-right img{
+    width:60px;
+    height: 65px;
+    border-radius: 50%;
+    margin-top:2rem;
+    margin-right: 0.5;
+}
+
+.car-move-right h3{
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.car-move-right h2{
+    color:#00e3bd;
+    font-size: 2rem;
+    font-weight: 700;
+    margin:0.8rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.car-move-right p{
+    color:#abb8b5;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:0;
+    font-weight: 500;
+
+}
+
+/* Animate Car */
+.animate-car img{
+    width:100%;
+    margin:-16.5rem 0 0 5.8rem;
+    /* animation-name: left;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: 1; */
+    animation: left 0.6s linear 0s;
+}
+.water{
+    /* background-image :url(../img/nww.webp); */
+    background-repeat: no-repeat;
+    background-position: 20px 100px;
+}
+
+
+@keyframes left {
+    0%{
+        transform:translateX(60%);
+    }
+
+    100%{
+        transform:translate(0);
+    }
+}
+
+/* media query start here header section and banner */
+@media only screen and (max-width:998px){
+    .car-move{
+        max-width: 90%;
+    }
+    .bar{
+        display: block;
+        z-index: 1001;
+        
+    }
+    .header {
+        position: relative;
+    }
+    #navbar{
+        position: absolute;
+        top:0;
+        right: 0;
+        width:50%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        z-index: 111;
+
+        transform: translateX(100%);
+        transition-duration: 0.5s;
+        transition-property: all;
+        transition-timing-function: linear;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+    }
+
+    #navbar-list{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: nowrap; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .active #navbar{
+        display: block;
+        transform: translateZ(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .active .bar [name="close-outline"]{
+        display: block;
+    }
+
+    .active .bar [name="menu-outline"]{
+        display: none;
+    }
+
+    .car-move-left h4{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .car-move-right{
+        margin-left: 0;
+    }
+
+    /* ANIMATE CAR */
+    .animate-car img{
+        margin: -12.5rem 0 0 1rem;
+    }
+
+}
+
+
+@media only screen and (max-width:700px){
+    .car-move-right {
+        display: none;
+    }
+
+    .car-move-left h4 {
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+
+    .animate-car img {
+        margin: -5rem 0 0 -1rem;
+        width: 800px;
+    }
+    /* over twenty year000 */
+    .container-over-20-year{
+        max-width:94%;
+        margin: 0 auto;
+    }
+
+    .over-20-year .container-over-20-year .over-20-year-left h1 {
+        font-size: 3.6rem;
+        margin: 0rem 4.9rem 0rem 4rem;
+        font-weight: 600;
+    }
+
+    .over-20-year .float {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 3.9rem 6.8rem 2.8rem 4rem;
+    }
+
+    .over-20-year .container-over-20-year h2 {
+        font-size: 1.6rem;
+        padding: 4rem 2rem 1.1rem 5rem;
+    }
+    .over-20-year .container-over-20-year p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 0 5.5rem 3.6rem 5rem;
+    }
+
+    .over-20-year .container-over-20-year .arrow {
+        padding: 0 6.8rem 8rem 5rem;
+    }
+
+    .over-20-top{
+        margin-bottom:4rem;
+    }
+
+    .our-stringth .container .banner {
+        padding: 0;
+    }
+
+   
+
+    .our-stringth .container .banner p {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        padding: 1.8rem 2rem 0 1.5rem;
+    }
+
+   .four-line #clean h3 {
+        font-size: 1.2rem;
+    }
+
+    .four-line #hr1{
+        width:80px;
+    }
+    .fixed-car .car-middle{
+        clear: both;
+    }
+
+    .our-stringth .container .row .car-middle{
+        order:-1;
+    }
+
+}
+
+
+/* <!-- four Strate line Start here --> */
+
+.four-line{
+    padding-bottom: 10rem;
+}
+
+#hr1{width:150px;
+    margin-top:2.5rem;
+    margin-right: 1rem;
+    border-color: #7836e2;
+}
+
+#clean{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#clean h3{
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: 500;
+}
+
+#clean span{
+    padding-right: 0.5rem;
+    color:#00e3bd;
+}
+
+
+/* over twelve start here */
+
+.over-20-year-left{
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.24);
+    background-color:#2d47af;
+    border-radius: 20px;
+}
+
+.over-20-year-left img{
+    width:100%;
+}
+
+.float{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+    padding:3.9rem 6.8rem 2.8rem 7rem;
+}
+
+.hr{
+    width:30px;
+    border:1px solid #00e3bd;
+    margin-top:2.5rem;
+    margin-right: 1rem;
+}
+.float h3{
+    font-size: 1.2rem;
+    color:#00e3bd;
+    font-weight: 700;
+}
+
+.over-20-year{
+    padding-bottom: 14rem;
+}
+    
+.over-20-year .over-20-year-left h1{
+    font-size:4.4rem;
+    font-weight: 700;
+    color:#fff;
+    margin: 0rem 16rem 0rem 7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.over-20-year h2{
+    font-size: 1.8rem;
+    color:#fff;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding:8rem 8.8rem 1.1rem 7rem;
+}
+
+.over-20-year p{
+    color: #dbdbdb;;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 3rem;
+    padding:0 4.8rem 3.6rem 7rem;
+}
+
+.over-20-year .arrow{
+    display: flex;
+    gap:2rem;
+    padding:0 6.8rem 8rem 6rem;
+}
+.over-20-year .btn{
+    width:120px;
+    height: 50px;
+    background-color: #00e3bd;
+    border: none;
+    padding-top:0.8rem;
+    color:#1A3398;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-right: 5rem;
+}
+
+.over-20-year h3{
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight:900;
+    line-height: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.over-20-year .i{
+    font-size:2.5rem;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    color:#29aa95; 
+    padding:1.9rem 0 0 1.1rem;
+    margin-right: 1rem;
+    box-shadow: -4px -8px 59px -6px rgba(0,0,0,0.46);
+}
+
+
+
+@media only screen and (max-width:720px){
+    .over-20-year .container-over-20-year{
+        width:80%;
+        margin:0 auto;
+    }
+}
+/* Left Section  */
+
+.over-20-year .Protection-100{
+    align-items: center;
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.24);
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fff;
+    background-image: url(../img/carwash3-wrap-bg1.webp);
+    background-position:center;
+    width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 6.7rem;
+    padding-top: 11rem;
+}
+.Protection-100 .protect{
+   font-size: 4rem;
+   color:#fff;
+   margin-left: 35%;
+   margin-bottom: 5rem;
+   width:80px;
+   height:80px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(35, 66, 150);
+    
+}
+
+.Protection-100 h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color:#0849bf;
+    margin-bottom: 0;
+    margin-top: 10%;
+}
+
+.Protection-100 p{
+    font-weight: 600;
+    color:#0849bf;
+    margin-bottom: 16rem;
+    padding:0;
+}
+
+
+/*  <!-- Our stringth Start here --> */
+.our-stringth .banner{
+    text-align: center;
+    padding:0 24rem;
+}
+
+.our-stringth .banner h4{
+    color:#00e3bd;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.our-stringth .banner h1{
+    font-size: 5rem;
+    color:#fff;
+    font-weight: 700;
+}
+
+.our-stringth .banner p{
+    color:#dbdbdb;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    padding-top:3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.my-row{
+    margin-top: 6rem;
+}
+
+.our-stringth .my-row .my-row-middle img{
+    width:100%;
+}
+
+
+.our-stringth .my-row-right {
+    text-align: right;
+}
+
+
+.our-stringth .my-row-left img{
+    /* width:50%; */
+    border: 1px solid #0849bf;
+    padding:3rem 2.8rem;
+    border-radius: 20px;
+}
+
+.our-stringth .my-row-right img{
+    border: 1px solid #0849bf;
+    padding:3rem 2.8rem;
+    border-radius: 20px;
+}
+
+ .our-stringth .my-row h1{
+    color:#fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-top: 2rem;
+ }
+
+ .our-stringth p{
+    color:#dbdbdb;
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding-top: 2rem;
+ }
+
+ .our-stringth img{
+    /* width:100%; */
+    margin-top: 3rem;
+ }
+
+   
+.our-stringth .car-icon-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 0rem;
+}
+
+.our-stringth .car-icon-left{
+    display: flex;
+    align-items: center;
+    gap:1rem; 
+    margin-bottom: 0rem;
+}
+
+.my-row .hr1{
+    width: 50%;
+    border: 1px solid #00e3bd;
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+}
+
+.our-stringth h3{
+    color:#00e3bd;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.fixed-car .car-inner section{
+    margin-bottom: 4rem;
+}
+
+/* inner right */
+.fixed-car .inner-right{
+    text-align: right;
+}
+.fixed-car .inner-right .car-icon{
+    padding-left: 25rem;
+}
+/* new css right here */
+
+.our-stringth .my-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.our-stringth .my-row .sdiv{
+    width:23%;
+}
+
+.our-stringth .my-row .sdiv1{
+    width:52%;
+}
+
+@media only screen and (max-width:720px){
+
+    .our-stringth .our-stringth-container{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .our-stringth .my-row .sdiv1{
+        width: 100%;
+        order:-1;
+    }
+
+    .our-stringth .my-row .sdiv{
+        width: 50%;
+    }
+
+    .our-stringth .my-row-right img{
+        width: 80px;
+        padding: 1.6rem 1.8rem;
+    }
+    .our-stringth .my-row-left img{
+        width: 80px;
+        padding: 1.8rem 1.8rem;
+    }
+
+    .my-row .hr1{
+        width: 20%;
+       
+    }
+
+    .our-stringth .my-row h1{
+        font-size: 1.5rem;
+    }
+
+    .our-stringth p{
+        font-size: 1.2rem;
+    }
+
+    .our-stringth .container .banner h1 {
+        font-size: 3.5rem;
+        color: #fff;
+        font-weight: 700;
+        /* padding: 0 2.6rem 0 1.5rem  */
+    }
+
+}
+
+
+/* img section start */
+
+#big-img{
+    background-image: linear-gradient(0deg, #F0F4F4 20%, #1C3AA4 20%);
+    padding-top: 7rem;
+}
+.only-img .right-img img{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.only-img .right-img{
+    padding-left: 0;
+}
+
+#section01 h4{
+    color:#0849bf;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+#section01{
+    display: flex;
+    gap:0.5rem;
+    margin-top: 6rem;
+}
+#section01 #h2{
+    width:30px;
+    border:1px solid #0849bf;
+    margin-top:2.5rem;
+    margin-right: 1rem;
+}
+
+
+.only-img h3{
+    font-size: 4rem;
+    font-weight: 600;
+    color:#0849bf;
+    padding-top:1rem;
+    padding-bottom: 3rem;
+}
+
+
+.inner-img{
+    padding: 1rem 3rem 5rem 5rem;
+    border-radius: 22px 0 0 22px;
+    background: #fff;
+    /* background-image: url(../img/carwash3-wrap-bg3.webp); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 340px;
+   
+}
+
+.only-img .btn{
+    background-color: #fff;
+    color:#0849bf;
+    border-color: #00e3bd;
+    width:140px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    padding-top: 1.3rem;
+    margin-bottom: 80%;
+}
+
+
+.only-img .our-work{
+    padding-right: 0;
+}
+
+
+@media only screen and (max-width:720px){
+    #big-img .big-img-container{
+        width:80%;
+        margin:0 auto;
+    }
+
+    #big-img .big-img-container .inner-img{
+        border-radius: 25px 0 0 0;
+    }
+
+    #big-img .big-img-container .only-img .right-img{
+        padding:0;
+    }
+
+    #big-img .big-img-container .only-img .our-work{
+        padding:0;
+    }
+
+    #big-img .big-img-container .only-img .btn{
+        margin-bottom: 1rem;
+    }
+}
+
+/* Customer Satisfied */
+
+
+#customer-satisfied{
+    padding-top: 2rem;
+    background-color: #F0F4F4;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 0rem;
+}
+#customer-satisfied .plus .plus1{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+
+}
+#customer-satisfied .plus img{
+    width:50px;
+}
+#customer-satisfied .plus{
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+
+#customer-satisfied .plus h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color:#0849bf;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#customer-satisfied img{
+    width:100%;
+}
+
+#customer-satisfied .icon img{
+    width:90px;
+    margin-top: -30px;
+}
+
+#customer-satisfied .icon{
+    display: flex;
+    gap:2rem;
+    padding-left: 2rem;
+}
+#customer-satisfied .right-part{
+    background-color: #fff;
+    border-radius: 22px;
+    padding: 5rem 3rem 3rem 2rem;
+}
+
+
+
+#customer-satisfied p{
+    color:#0849bf;
+    line-height: 2.4rem;
+    font-weight: 500;
+    padding-right: 4rem;
+}
+
+#customer-satisfied h2{
+    text-align: right;
+    color:#0849bf;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top:4rem;
+    padding-bottom: 3rem;
+}
+
+#customer-satisfied .img{
+    border-radius: 25px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(206,236,236,1) 100%);
+}
+
+
+@media only screen and (max-width:720px){
+    #customer-satisfied #customer-satisfied-container{
+        width:80%;
+        margin:0 auto;
+    }
+}
+
+
+/*view gallery  */
+.over{
+    background-image: url(../img/anima.svg);
+    margin-top:9rem;
+    padding-top: 2rem;
+    background-repeat: no-repeat;
+
+}
+
+.view-gallery{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.view-gallery h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color:#0849bf;
+}
+
+.view-gallery b{
+    color:#00e3bd;
+}
+
+.view-gallery h6{
+    color:#0849bf;
+    padding-top: 1.5rem;
+    font-size: 1.65rem;
+    padding-bottom: 5rem;
+}
+
+.view-gallery .btn{
+    width:140px;
+    height: 55px;
+    background-color: #00e3bd;
+    color:#0849bf;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+
+/* joint four cll start here */
+
+#four-section{
+    background-color: #F0F4F4;
+    background-image: url(../img/bk\ final.webp);
+    background-repeat: no-repeat;
+    padding-top: 14rem;
+    padding-bottom: 15rem;
+    background-position: center;
+}
+
+.joint-four-cl .same{
+    padding:2rem 3rem 2rem 4.8rem;
+    background-color: #fff;
+    border-radius: 22px;
+}
+
+.joint-four-cl h4{
+    text-align: center;
+    color:#0849bf;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.joint-four-cl h1{
+        text-align: center;
+        color:#0849bf;
+        font-size: 3.5rem;
+        font-weight: 600;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+.change{
+    display: flex;
+    align-items: center;
+}    
+
+#four-section .joint-four-cl hr{
+    width:50px;
+    margin:1.5rem;
+}
+
+.joint-four-cl .same i{
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.joint-four-cl .color{
+    color: #00e3bd;
+}
+
+.joint-four-cl p{
+    font-size: 1.5rem;
+    color:gray;
+    margin-bottom: 0;
+}
+
+.joint-four-cl .same .color1{
+    color:#0849bf;
+}
+
+
+.joint-four-cl .btn{
+    border-color: #00e3bd;
+    padding:1.5rem 5rem;
+    margin:3rem 0 2rem 0;
+}
+
+
+.joint-four-cl .premum-plus{
+    background-color: #0849bf;
+}
+
+#four-section .joint-four-cl .premum-plus p{
+    color:#fff;
+}
+.joint-four-cl .premum-plus h1{
+    color:#fff;
+}
+.joint-four-cl .premum-plus h4{
+    color:#fff;
+}
+
+
+@media only screen and (max-width: 720px){
+    #four-section .four-section-container{
+        width:80%;
+        margin: 0 auto;
+    }
+}
+
+/* Book it Now...................... */
+/* last part here */
+
+#last{
+    max-width:98%;
+    background-color: #fff;
+    margin:0 auto;
+    border-radius: 22px;
+}
+
+#last h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:#0849bf;
+    padding-top:4rem;
+    line-height: 3.5rem;
+    padding-right: 8rem;
+}
+
+#last h1{
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    color:#c2b3b3;
+}
+
+#last .btn{
+    float:right;
+    width: 140px;
+    height: 55px;
+    background-color: #00e3bd;
+    color: #0849bf;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    margin-top:10rem;
+}
+
+#last .last-second{
+    padding-top: 8rem;
+}
+
+#last .circle-img img{
+    width:100%;
+    margin-top: -3rem;
+}
+
+
+#last .img2 img{
+    width:50%;
+}
+
+#last .last-second h2{
+    margin-top:0;
+    padding:0;
+    font-size: 2rem;
+    color:#0849bf;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#last .last-second p{
+    color:#0849bf;
+    font-size: 700;
+}
+
+footer{
+    padding:3rem;
+}
+
+footer p{
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 720px){
+    
+    #last #last-container{
+        width:80%;
+        margin: 0 auto;
+    }
+   #last #last-container .custom-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   #last #last-container .custom-row .circle-img{
+    order: -1;
+   }
+
+   #last #last-container .custom-row .circle-img img{
+    width:200px;
+   }
+   #last h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding:0;
+}
+#last h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding:0;
+   
+}
+#last .btn {
+    margin-top: 2rem;
+}
+
+#last #last-container .last-second{
+   text-align: center;
+}
+#last .img2 img {
+    width: 120px;
+    padding:2rem 0;
+}
+#last .last-second h2 {
+    padding-top: 0.1rem;
+}
+footer p {
+    font-size: 1rem;
+    text-align: center;
+}
+}
